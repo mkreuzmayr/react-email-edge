@@ -7,7 +7,7 @@ export const config = {
 };
 
 export default async function handler() {
-  const html = await renderAsync(
+  const text = await renderAsync(
     React.createElement(Preview, {
       name: 'John Doe',
       text: 'This is a test email.',
@@ -17,5 +17,5 @@ export default async function handler() {
     }
   );
 
-  return new Response(html);
+  return new Response(text);
 }
